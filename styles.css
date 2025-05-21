@@ -19,6 +19,8 @@
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
+    position: fixed;
+    width: 100%;
   }
 
   .logo {
@@ -27,6 +29,8 @@
     color: crimson;
     letter-spacing: 2px;
     font-family: spawned;
+    text-shadow: 2px 2px 10px black;
+    text-decoration: none;
   }
 
   nav {
@@ -39,6 +43,7 @@
     margin-left: 2rem;
     font-weight: bold;
     transition: color 0.3s;
+    font-size: 1.2rem;
   }
 
   nav a:hover {
@@ -52,6 +57,23 @@
     place-items: center;
     text-align: center;
     padding: 10rem;
+    margin-top: 5rem;
+  }
+  .hero h1 {
+    font-size: 4rem;
+    color: white;
+    text-shadow: 2px 2px 10px black;
+    font-weight: bold;
+    letter-spacing: 1px;  
+  }
+  .hero p {
+    font-size: 1.5rem;
+    color: #f0f0f0;
+    margin-top: 1rem;
+    text-shadow: 2px 2px 10px black;
+    font-weight: bold;
+    letter-spacing: 1px;
+
   }
   .galeria {
     background: url('kepek/spawnwithtod.png') no-repeat center center fixed;
@@ -60,12 +82,7 @@
     place-items: center;
     text-align: center;
     padding: 10rem;
-  }
-
-  h1{
-    font-size: 4rem;
-    color: white;
-    text-shadow: 2px 2px 10px black;
+    margin-top: 5rem;
   }
 
   .content {
@@ -86,11 +103,19 @@
   .card:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    cursor: pointer;
   }
   .card img{
     width: 100%;
     border-radius: 10px;
     margin: auto;
+    display: block;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .card img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
   }
 
   .card h2 {
@@ -108,5 +133,48 @@
     text-align: center;
     padding: 1.5rem;
     font-size: 0.9rem;
-    color: #aaa;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-size: cover;
+    color: crimson;
+    text-decoration: none;
+    text-shadow: 2px 2px 10px black;
+  }
+  @media screen and (max-width: 768px) {
+    .hero {
+      padding: 5rem;
+    }
+    .galeria {
+      padding: 5rem;
+    }
+    h1{
+      font-size: 3rem;
+    }
+    nav a {
+      font-size: 1rem;
+    }
+    .card h2 {
+      font-size: 1.5rem;
+    }
+    .card p {
+      font-size: 0.85rem;
+    }
+    footer {
+      font-size: 0.8rem;
+    }
+    .content {
+      padding: 1rem;
+    }
+    .card {
+      padding: 0.5rem;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 5px;
+    }
   }
